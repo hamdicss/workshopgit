@@ -1,0 +1,83 @@
+hamdi@DESKTOP-KBM94QV MINGW64 ~/Desktop
+$ mkdir learn_git_again
+
+hamdi@DESKTOP-KBM94QV MINGW64 ~/Desktop
+$ cd learn_git_again
+
+hamdi@DESKTOP-KBM94QV MINGW64 ~/Desktop/learn_git_again
+$ touch third.txt
+
+hamdi@DESKTOP-KBM94QV MINGW64 ~/Desktop/learn_git_again
+$ git init
+Initialized empty Git repository in C:/Users/hamdi/Desktop/learn_git_again/.git/
+
+hamdi@DESKTOP-KBM94QV MINGW64 ~/Desktop/learn_git_again (master)
+$ git add third.txt
+
+hamdi@DESKTOP-KBM94QV MINGW64 ~/Desktop/learn_git_again (master)
+$ git commit -m"adding third.txt"
+[master (root-commit) b377a36] adding third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+
+hamdi@DESKTOP-KBM94QV MINGW64 ~/Desktop/learn_git_again (master)
+$ git log
+commit b377a36d9acd0e49ad59309f583648c5ddec492f (HEAD -> master)
+Author: hamdicss <hamdi.belhassen@enis.tn>
+Date:   Tue Apr 13 13:12:26 2021 +0200
+
+    adding third.txt
+
+hamdi@DESKTOP-KBM94QV MINGW64 ~/Desktop/learn_git_again (master)
+$ touch fourth.txt
+
+hamdi@DESKTOP-KBM94QV MINGW64 ~/Desktop/learn_git_again (master)
+$ git add fourth.txt
+
+hamdi@DESKTOP-KBM94QV MINGW64 ~/Desktop/learn_git_again (master)
+$ git commit -m"adding fourth.txt"
+[master 238139a] adding fourth.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+
+hamdi@DESKTOP-KBM94QV MINGW64 ~/Desktop/learn_git_again (master)
+$ git rm --cached third.txt
+rm 'third.txt'
+
+hamdi@DESKTOP-KBM94QV MINGW64 ~/Desktop/learn_git_again (master)
+$ git add .
+
+hamdi@DESKTOP-KBM94QV MINGW64 ~/Desktop/learn_git_again (master)
+$ git commit -m"third.txt"
+On branch master
+nothing to commit, working tree clean
+hamdi@DESKTOP-KBM94QV MINGW64 ~/Desktop/learn_git_again (master)
+$ git commit -m"removing third.txt"
+On branch master
+nothing to commit, working tree clean
+
+hamdi@DESKTOP-KBM94QV MINGW64 ~/Desktop/learn_git_again (master)
+$ git log
+commit 238139a46855afea3e93bf443222d1df10962c50 (HEAD -> master)
+Author: hamdicss <hamdi.belhassen@enis.tn>
+Date:   Tue Apr 13 13:19:11 2021 +0200
+
+    adding fourth.txt
+
+commit b377a36d9acd0e49ad59309f583648c5ddec492f
+Author: hamdicss <hamdi.belhassen@enis.tn>
+Date:   Tue Apr 13 13:12:26 2021 +0200
+
+    adding third.txt
+
+hamdi@DESKTOP-KBM94QV MINGW64 ~/Desktop/learn_git_again (master)
+$ git config --global core.pager cat
+
+hamdi@DESKTOP-KBM94QV MINGW64 ~/Desktop/learn_git_again (master)
+$ git config --global --list
+user.name=hamdicss
+user.email=hamdi.belhassen@enis.tn
+core.pager=cat
+
+hamdi@DESKTOP-KBM94QV MINGW64 ~/Desktop/learn_git_again (master)
+$
